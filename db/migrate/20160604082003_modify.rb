@@ -1,8 +1,6 @@
-class CreateCappucinia < ActiveRecord::Migration
+class Modify < ActiveRecord::Migration
   def change
-    create_table :cappucinia do |t|
-      t.string :name
-      t.string :body
+    change_table :cappucinia do |t|
       t.string :restaurantName
       t.string :restaurantAdd
       t.string :restaurantPhone
@@ -10,9 +8,7 @@ class CreateCappucinia < ActiveRecord::Migration
       t.string :productName
       t.string :productPrice
       t.string :productRating
-      t.string :comments
-
-      t.timestamps null: false
+      t.string :comments   
     end
   end
 end

@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160424140555) do
+ActiveRecord::Schema.define(version: 20160604082003) do
 
   create_table "cappucinia", force: :cascade do |t|
     t.string   "name"
     t.string   "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.string   "restaurantName"
+    t.string   "restaurantAdd"
+    t.string   "restaurantPhone"
+    t.string   "restaurantWebsite"
+    t.string   "productName"
+    t.string   "productPrice"
+    t.string   "productRating"
+    t.string   "comments"
   end
 
 end
