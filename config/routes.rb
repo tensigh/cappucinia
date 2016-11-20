@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'cappucinia#index'
+  # get 'new#newRest'
   resources :cappucinia , only: [:create]
   resources :cappucinia
   # get 'cappucinia/index'
