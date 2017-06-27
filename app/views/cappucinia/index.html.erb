@@ -1,12 +1,15 @@
+<h1>Cappucinia</h1>
+<p>Enter a restaurant or coffee place:</p>
+<p>
 <%= form_for(Cappucinium.new) do |f| %>
-    名前：
+    店舗名：
 
 <%= f.text_field :name %>
 
-    内容:
+    住所:
 
 <%= f.text_field :body %>
 
 <%= f.submit %>
-
+</p>
 <% end %>
