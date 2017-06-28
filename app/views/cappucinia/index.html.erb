@@ -4,12 +4,46 @@
 <%= form_for(Cappucinium.new) do |f| %>
     店舗名：
 
-<%= f.text_field :restaurantName %>
+    <%= f.text_field :restaurantName %>
+</p>
+<p>
+        住所:
 
-    住所:
+    <%= f.text_field :restaurantAdd %>
 
-<%= f.text_field :body %>
+        電話番号：
+
+    <%= f.text_field :restaurantPhone %>
+</p>
+<p>
+        ホームページ：
+
+
+    <%= f.text_field :restaurantWebsite %>
+</p>
+<p>
+        飲み物名：
+
+    <%= f.text_field :productName %>
+
+        金閣：
+
+    <%= f.text_field :productPrice %>
+</p>
+<p>
+        ランキング:
+
+<%= f.text_field :productRating %>
+</p>
+<p>
+
+    コメント：
+
+<%= f.text_field :comments %>
+</p>
 
 <%= f.submit %>
+</p>
+<p ids="pictureArea">Enjoy!
 </p>
 <% end %>

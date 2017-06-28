@@ -19,6 +19,6 @@ class CappuciniaController < ApplicationController
   
 private
   def cappucunia_params
-    params.require(:cappucinium).permit(:restaurantName, :body)
+    params.require(:cappucinium).permit(:restaurantName, :restaurantAdd, :restaurantPhone, :restaurantWebsite, :productName, :productPrice, :productRating, :comments)
   end
 end
