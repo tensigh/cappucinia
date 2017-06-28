@@ -2,18 +2,23 @@ class CappuciniaController < ApplicationController
     before_action :set_message, only: [:edit, :update, :destroy]
     
   def index
-    # @cappucinium = cappucnium.all
-    @cappcunia = Cappucinium.new
-    # @cappcunia = Cappucnia.new
+    @cappucinias = Cappucinium.all
+    @cappucunia = Cappucinium.new
   end
+  
   def create
-    @cappcunia = Cappucinium.new
-    if @cappcunia.save
-      redirect_to root_path , notice: 'メッセージを保存しました'
+    @cappucunia = Cappucinium.new(cappucunia_params)
+    if @cappucunia.save
+      redirect_to root_path, notice: 'メッセージを保存しました'
     else
-       @cappcunia = Cappucinium.all
+       @cappucunias = Restaurants.all
        flash.now[:alert] = "メッセージの保存に失敗しました。"
        render 'index'
     end
+  end
+  
+private
+  def cappucunia_params
+    params.require(:cappucinium).permit(:restaurantName, :body)
   end
 end

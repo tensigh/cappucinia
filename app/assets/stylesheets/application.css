@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+  .titleBox {
+     background-color: brown;
+     border: 10px;
+ }
