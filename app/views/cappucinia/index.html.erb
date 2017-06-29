@@ -1,15 +1,19 @@
-<h1 class="titleBox">Cappucinia</h1>
-<p>Enter a restaurant or coffee place:</p>
+<div class="panel panel-default">
+    <div class="panel-heading">
+      <h1 class="titleBox">Cappucinia</h1>
+    </div>
+    <p>Enter a restaurant or coffee place:</p>
 
-<%= form_for(Cappucinium.new) do |f| %>
-<div>
+ <div class="panel-body">
+  <%= form_for(Cappucinium.new) do |f| %>
+  <div>
     <p>
         店舗名：
 
         <%= f.text_field :restaurantName %>
     </p>
-</div>
-<div>
+  </div>
+  <div>
     <p>
         住所:
 
@@ -19,16 +23,16 @@
 
         <%= f.text_field :restaurantPhone %>
     </p>
-</div>
-<div>
+  </div>
+  <div>
     <p>
         ホームページ：
 
 
         <%= f.text_field :restaurantWebsite %>
     </p>
-</div>
-<div>
+  </div>
+  <div>
     <p>
         飲み物名：
 
@@ -38,29 +42,27 @@
 
         <%= f.text_field :productPrice %>
     </p>
-</div>
-<div>
+  </div>
+  <div>
     <p>
         ランキング:
 
     <%= f.text_field :productRating %>
     </p>
-</div>
-<div>
+  </div>
+  <div>
     <p>
 
     コメント：
 
     <%= f.text_field :comments %>
     </p>
-</div>
-<div>
+  </div>
+  <div>
     <p>
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-sm btn-primary" %>
     </p>
+  </div>
+  <% end %>
+ </div>
 </div>
-<div>
-    <p ids="pictureArea">Enjoy!
-    </p>
-</div>
-<% end %>

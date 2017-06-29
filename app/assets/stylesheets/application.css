@@ -19,3 +19,9 @@
      border-color: black;
  }
 
+  #notification {
+    border: 5px solid #9c9;
+    background-color: #cfc;
+    padding: 5px;
+    margin: 10px 0;
+}
