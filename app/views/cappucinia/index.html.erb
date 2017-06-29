@@ -1,49 +1,66 @@
 <h1 class="titleBox">Cappucinia</h1>
 <p>Enter a restaurant or coffee place:</p>
-<p>
-<%= form_for(Cappucinium.new) do |f| %>
-    店舗名：
 
-    <%= f.text_field :restaurantName %>
-</p>
-<p>
+<%= form_for(Cappucinium.new) do |f| %>
+<div>
+    <p>
+        店舗名：
+
+        <%= f.text_field :restaurantName %>
+    </p>
+</div>
+<div>
+    <p>
         住所:
 
-    <%= f.text_field :restaurantAdd %>
+        <%= f.text_field :restaurantAdd %>
 
         電話番号：
 
-    <%= f.text_field :restaurantPhone %>
-</p>
-<p>
+        <%= f.text_field :restaurantPhone %>
+    </p>
+</div>
+<div>
+    <p>
         ホームページ：
 
 
-    <%= f.text_field :restaurantWebsite %>
-</p>
-<p>
+        <%= f.text_field :restaurantWebsite %>
+    </p>
+</div>
+<div>
+    <p>
         飲み物名：
 
-    <%= f.text_field :productName %>
+        <%= f.text_field :productName %>
 
         金閣：
 
-    <%= f.text_field :productPrice %>
-</p>
-<p>
+        <%= f.text_field :productPrice %>
+    </p>
+</div>
+<div>
+    <p>
         ランキング:
 
-<%= f.text_field :productRating %>
-</p>
-<p>
+    <%= f.text_field :productRating %>
+    </p>
+</div>
+<div>
+    <p>
 
     コメント：
 
-<%= f.text_field :comments %>
-</p>
-
-<%= f.submit %>
-</p>
-<p ids="pictureArea">Enjoy!
-</p>
+    <%= f.text_field :comments %>
+    </p>
+</div>
+<div>
+    <p>
+    <%= f.submit %>
+    </p>
+</div>
+<div>
+    <p ids="pictureArea">Enjoy!
+    </p>
+</div>
 <% end %>
