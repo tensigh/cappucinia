@@ -17,6 +17,7 @@
      background-color: brown;
      border: 10px;
      border-color: black;
+     background-image: url("Cappucino.png")
  }
 
   #notification {
@@ -27,5 +28,9 @@
 }
 
  .inputBox {
+     background-color: #f4d442;
+ }
+ 
+ .field input {
      background-color: #f4d442;
  }

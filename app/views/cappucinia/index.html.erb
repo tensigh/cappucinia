@@ -6,61 +6,51 @@
 
  <div class="panel-body">
   <%= form_for(Cappucinium.new) do |f| %>
-  <div>
+  <div> <!-- <div class='col-xs-3'> -->
     <p>
         店舗名：
-
-        <%= f.text_field :restaurantName %>
+        <%= f.text_field :restaurantName, class: 'inputBox' %>
+        <!-- <%= f.text_field :restaurantName, class: 'form-control' %>-->
     </p>
   </div>
   <div>
     <p>
         住所:
-
-        <%= f.text_field :restaurantAdd %>
-
+        <%= f.text_field :restaurantAdd, class: 'inputBox' %>
+        <!-- <%= f.text_field :restaurantAdd, class: 'inputBox form-control' %> -->
         電話番号：
-
-        <%= f.text_field :restaurantPhone %>
+        <%= f.text_field :restaurantPhone, class: 'inputBox' %>
     </p>
   </div>
   <div>
     <p>
         ホームページ：
-
-
-        <%= f.text_field :restaurantWebsite %>
+        <%= f.text_field :restaurantWebsite, class: 'inputBox' %>
     </p>
   </div>
   <div>
     <p>
         飲み物名：
-
-        <%= f.text_field :productName %>
-
+        <%= f.text_field :productName, class: 'inputBox' %>
         金閣：
-
-        <%= f.text_field :productPrice %>
+        <%= f.text_field :productPrice, class: 'inputBox' %>
     </p>
   </div>
   <div>
     <p>
         ランキング:
-
-    <%= f.text_field :productRating %>
+        <%= f.text_field :productRating, class: 'inputBox' %> %>
     </p>
   </div>
   <div>
     <p>
-
-    コメント：
-
-    <%= f.text_field :comments %>
+        コメント：
+        <%= f.text_field :comments, class: 'inputBox' %> %>
     </p>
   </div>
   <div>
     <p>
-    <%= f.submit class: "btn btn-sm btn-primary" %>
+        <%= f.submit class: "btn btn-sm btn-primary" %>
     </p>
   </div>
   <% end %>
