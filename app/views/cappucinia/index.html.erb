@@ -56,3 +56,13 @@
   <% end %>
  </div>
 </div>
+   <% if @cappucunia.errors.any? %>
+    <div class="form_errors">
+      <h3>Errors</h3>
+      <ul>
+        <% @cappucunia.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>

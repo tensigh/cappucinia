@@ -34,3 +34,17 @@
  .field input {
      background-color: #f4d442;
  }
+ 
+ .field_with_errors {
+    color: red;
+    background: transparent;
+ }
+
+ .field_with_errors input {
+    border: thin solid red;
+ }
+ 
+ .form_errors { 
+     color: red;
+ }
+ 
