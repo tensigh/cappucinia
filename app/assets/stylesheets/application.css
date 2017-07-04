@@ -27,6 +27,10 @@
     margin: 10px 0;
 }
 
+ input {
+    margin-bottom: 1em;
+ }
+
  .inputBox {
      background-color: #f4d442;
  }
@@ -47,4 +51,3 @@
  .form_errors { 
      color: red;
  }
- 
