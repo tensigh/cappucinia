@@ -9,7 +9,8 @@ class CappuciniaController < ApplicationController
   def create
     @cappucunia = Cappucinium.new(cappucunia_params)
     if @cappucunia.save
-      redirect_to root_path, notice: 'メッセージを保存しました'
+      redirect_to root_path
+      flash[:notice] = '店舗追加が出来ました'
     else
        @cappucunias = Cappucinium.all
        flash.now[:alert] = "メッセージの保存に失敗しました。"
