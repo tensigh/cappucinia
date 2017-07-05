@@ -1,5 +1,8 @@
 ---
 ja:
+  form_tag:
+    email: "メール"
+    password: "パスワード"
   date:
     abbr_day_names:
     - 日

@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   root 'cappucinia#index'
   # get 'new#newRest'
   resources :cappucinia , only: [:create]
   resources :cappucinia
+  
+  resource :session
   # get 'cappucinia/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
