@@ -1,5 +1,6 @@
 class CappuciniaController < ApplicationController
-    before_action :set_message, only: [:edit, :update, :destroy]
+   before_action :ensure_login, only: [:create]
+   
     
   def index
     @cappucinias = Cappucinium.all
