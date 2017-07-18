@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'sessions/create'
 
   get 'sessions/destroy'
+  
+  get 'cappucinia/create'
 
   root 'cappucinia#index'
   # get 'new#newRest'

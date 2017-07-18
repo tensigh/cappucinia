@@ -3,14 +3,16 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @current_user = User.find_by(email: params[:email].downcase)
-    session[:id] = @current_user.id
+    @current_user = User.find_by(email: params[:email])
+    # session[:user_id] = @current_user.id
+    # if @current_user.authenticate(params[:password])
     if @current_user && @current_user.authenticate(params[:password])
       session[:user_id] = @current_user.id
       flash[:info] = "logged in as #{@current_user.name}"
-      redirect_to root_path
+    redirect_to cappucinia_path # root_path
     else
-      flash[:danger] = 'invalid email/password combination'
+    #  flash[:danger] = 'invalid email/password combination'
+      flash[:info] = 'invalid email/password combination'
       render action: 'new'
     end
   end
