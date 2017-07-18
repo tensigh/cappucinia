@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
   def create
     @current_user = User.find_by(email: params[:email])
     # session[:user_id] = @current_user.id
-    # if @current_user.authenticate(params[:password])
     if @current_user && @current_user.authenticate(params[:password])
       session[:user_id] = @current_user.id
       flash[:info] = "logged in as #{@current_user.name}"
@@ -13,6 +12,7 @@ class SessionsController < ApplicationController
     else
     #  flash[:danger] = 'invalid email/password combination'
       flash[:info] = 'invalid email/password combination'
+      @current_user = nil
       render action: 'new'
     end
   end
