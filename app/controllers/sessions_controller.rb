@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     # session[:user_id] = @current_user.id
     if @current_user && @current_user.authenticate(params[:password])
       session[:user_id] = @current_user.id
-      flash[:info] = "logged in as #{@current_user.name}"
+      flash[:notice] = "logged in as #{@current_user.name}"
     redirect_to cappucinia_path # root_path
     else
     #  flash[:danger] = 'invalid email/password combination'

@@ -33,6 +33,7 @@
 
  .inputBox {
      background-color: #f4d442;
+ 
  }
  
  .field input {
@@ -51,3 +52,4 @@
  .form_errors { 
      color: red;
  }
+ 

@@ -9,16 +9,17 @@
 </head>
 <body>
     <% if @current_user %>
-      <p>Logged in as: <%= @current_user.name %>, <%= @current_user.email %></p>
+      <p>Logged in as: <%= @current_user.name %></p>
     <% else %>
       <p>Not logged in</p>
     <% end %>
+    <em><%= link_to "(Logout)", session_path, method: :delete %></em>
   <% unless flash[:notice].blank? %>
     <div id="notification"><%= flash[:notice]%>
     </div>
   <% end %>
   
-  <em><%= link_to "(Logout)", session_path, method: :delete %></em>
+  
 
 <%= yield %>
 
