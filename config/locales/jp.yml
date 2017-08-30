@@ -1,6 +1,11 @@
 ---
 ja:
-  form_tag:
+  activerecord:
+    attributes:
+      cappucinium:
+        restaurantName: "店舗名"
+        productName: "商品名"
+        productPrice: "金額"
     email: "メール"
     password: "パスワード"
   date:
